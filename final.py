@@ -14,5 +14,9 @@ plt.rcParams['figure.figsize'] = [10, 10]
 plt.rcParams['figure.dpi'] = 200
 plt.style.use("dark_background")
 sns.set_style('whitegrid')
-p = sns.heatmap(corr, cmap=seaborn.color_palette("mako", as_cmap=True))
+p = sns.heatmap(corr, cmap=sns.color_palette("mako", as_cmap=True))
+for tick_label in p.get_yticklabels():
+    tick_label.set_color("white")
+for tick_label in p.get_xticklabels():
+    tick_label.set_color("white")
 p.get_figure().savefig("medals.png",bbox_inches='tight',transparent=False)
