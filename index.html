@@ -26,37 +26,33 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-}
+		}
+		
+		 body {
+        		counter-reset: h1counter;
+   			 }
+    		h1 {
+        		counter-reset: h2counter;
+    			}
+    		h2 {
+        		counter-reset: h3counter;
+   			 }
+    		h2:before {
+        		content: counter(h2counter) ".\0000a0\0000a0";
+        		counter-increment: h2counter;
+   			 }
+    		h3:before {
+        		content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+        		counter-increment: h3counter;
+			}
 		
 	</style>
 	
 </head>
-
-<body bgcolor="000000" text="00bfb2">
-
-<style>
- body {
-        counter-reset: h1counter;
-    }
-    h1 {
-        counter-reset: h2counter;
-    }
-    h2 {
-        counter-reset: h3counter;
-    }
-    h2:before {
-        content: counter(h2counter) ".\0000a0\0000a0";
-        counter-increment: h2counter;
-    }
-    h3:before {
-        content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-        counter-increment: h3counter;
-    }
-</style>
 	
 
 
-<body>
+<body bgcolor="000000" text="00bfb2">
 	<h1> Maya is cool </h1>
 	
 </body>
